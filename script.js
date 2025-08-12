@@ -79,22 +79,23 @@
         });
 
         //Mostrar o email ao clicar no link
-        function showMail() {
-            const novaJanela = window.open('', '_blank', 'width=600,height=400');
+        function showMail(e) {
+            if (e) e.preventDefault();
+            const novaJanela = window.open('', '_blank');
             if (!novaJanela) return;
-          
+
             const doc = novaJanela.document;
             doc.title = 'Meu E-mail';
-          
+
             const link = doc.createElement('link');
             link.rel = 'stylesheet';
             link.href = '/index.css';
             doc.head.appendChild(link);
-          
+
             const h1 = doc.createElement('h1');
             h1.textContent = 'ricarditti5@gmail.com';
             doc.body.appendChild(h1);
-          }
+        }
 
         // Detectar cliques nos links para analytics (exemplo)
         links.forEach(link => {
