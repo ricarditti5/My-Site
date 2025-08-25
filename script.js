@@ -93,7 +93,7 @@
             doc.head.appendChild(link);
 
             const h1 = doc.createElement('h1');
-            h1.textContent = 'ricarditti5@gmail.com';
+            h1.textContent = 'ricarditti@proton.me';
             doc.body.appendChild(h1);
         }
 
